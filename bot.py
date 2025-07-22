@@ -5,7 +5,9 @@ import asyncio
 import os
 from collections import deque
 from dotenv import load_dotenv
+import certifi
 
+os.environ['SSL_CERT_FILE'] = certifi.where()
 load_dotenv()
 # Bot setup
 intents = discord.Intents.default()
