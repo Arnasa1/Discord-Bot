@@ -3,4 +3,5 @@ yt-dlp
 flask
 python-dotenv
 pynacl
+urllib3
 certifi
