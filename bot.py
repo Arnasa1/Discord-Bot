@@ -4,7 +4,9 @@ import yt_dlp
 import asyncio
 import os
 from collections import deque
+from dotenv import load_dotenv
 
+load_dotenv()
 # Bot setup
 intents = discord.Intents.default()
 intents.message_content = True
@@ -195,5 +197,5 @@ async def volume(ctx, volume: int):
     else:
         await ctx.send("Volume must be between 0 and 100")
 
-
-bot.run('MTM5NzI2MTAzNDA4Njk5Mzk1MA.GwCHty.AmJksrLaDRut0oZe4IT-WNoFc3D0iIZC2MokDU')
+token = os.getenv('DISCORD_TOKEN')
+bot.run(token)
